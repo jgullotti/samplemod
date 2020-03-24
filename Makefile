@@ -1,5 +1,10 @@
 init:
-	pip install -r requirements.txt
+	pipenv install
 
 test:
-	nosetests tests
+	pytest
+
+docs:
+	pdoc --html sample
+
+.PHONY: init test docs
